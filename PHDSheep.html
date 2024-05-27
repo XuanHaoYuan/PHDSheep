@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PHD编程</title>
+    <meta name="description" content="PHD编程 - 激发孩子们的编程兴趣，培养未来的科技人才">
+    <meta name="author" content="Earl, Lee, Freda">
+   <!-- <link rel="canonical" href="http://phdsheep.cn">-->
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #3366ff, #ff66cc);
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        nav {
+            background: rgba(0, 0, 0, 0.4);
+            padding: 10px 2px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            transition: background 0.3s ease;
+            box-shadow: 0 3px 4px rgba(0, 0, 0, 0.1);
+        }
+        nav a {
+            color: #ffffff;
+            text-decoration: none;
+            margin: 0 8px;
+            font-size: 1em;
+            position: relative;
+        }
+        nav a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            display: block;
+            background: #ffffff;
+            transition: width 0.3s;
+            bottom: -5px;
+            left: 0;
+        }
+        nav a:hover::after {
+            width: 100%;
+        }
+        header {
+            text-align: center;
+            padding: 100px 20px;
+            background: transparent;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+            color: #ffffff;
+            animation: fadeIn 2s;
+        }
+        header p {
+            font-size: 1.2em;
+            color: #ffffff;
+            animation: fadeIn 3s;
+        }
+        section {
+            padding: 50px 20px;
+            max-width: 1000px;
+            margin: 0 auto;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInSection 1.5s forwards;
+        }
+        section h2 {
+            font-size: 2em;
+            border-bottom: 2px solid #ffffff;
+            padding-bottom: 10px;
+            margin-bottom: 20px;
+        }
+        .content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+        .content > div {
+            flex: 1;
+            min-width: 250px;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInSection 1.5s forwards;
+        }
+        .content > div h3 {
+            color: #ffffff;
+            margin-top: 0;
+            position: relative;
+            z-index: 2;
+        }
+        .content > div p {
+            color: #ffffff;
+            position: relative;
+            z-index: 2;
+        }
+        .content > div::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: rgba(255, 255, 255, 0.1);
+            transform: rotate(45deg);
+            transition: all 0.5s ease;
+        }
+        .content > div:hover::before {
+            top: -25%;
+            left: -25%;
+            width: 150%;
+            height: 150%;
+        }
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.6);
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+        }
+        footer p {
+            margin: 0;
+            color: #ffffff;
+        }
+        @media (max-width: 600px) {
+            .content {
+                flex-direction: column;
+            }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @keyframes fadeInSection {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="#about">关于我们</a>
+        <a href="#founders">创始人</a>
+        <a href="#courses">课程介绍</a>
+        <a href="#contact">联系信息</a>
+    </nav>
+    <header>
+        <h1>PHD编程</h1>
+        <p>激发孩子们的编程兴趣，培养未来的科技人才</p>
+		<p>Inspiring Children's Interest in Programming, Cultivating Future Technology Talent</p>
+    </header>
+    <section id="about">
+        <h2>关于我们</h2>
+        <p>在邯郸这片热土上，我们汇聚了一支由海归留学生组成的顶尖编程团队。我们融合国际前沿的编程技术与国内教育环境，致力于为广大学子提供卓越、创新的编程教育。我们的教师团队不仅编程经验丰富，而且深谙国内外教育差异，能够为学生提供最适合的学习方案。</p>
+		<p>编程主要学的是编程语言、数据结构和算法、编程思维等。编程语言是人与计算机和数据交流的工具，就像我们学习英语是为了和外国人交流一样。对于少儿编程领域常见的编程语言有 Scratch、Python、C++等。</p>
+		<p>数据结构和算法是编程的核心，它们可以帮助我们更高效地处理和存储数据。编程思维则是一种解决问题的思维方式，它包括分解问题、抽象问题、模式识别、算法设计等。学习编程可以帮助我们提高逻辑思维能力、创造力、解决问题的能力等，同时也可以为未来的职业发展打下基础。</p>
+    </section>
+    <section id="founders">
+        <h2>创始人</h2>
+        <div class="content">
+            <div>
+                <h3>Earl</h3>
+                <p>技术背景：Computer Science | 毕业院校：University of Technology Sydney</p>
+                <p>简介：Earl曾任职于阿里巴巴，拥有多年的大数据开发经验，擅长使用数据库，数据分析，Ai模型开发等，有丰富教育经验，致力于将最先进的技术带给孩子们。负责PHDSheep Ai的深度学习、自然语言处理等工作。</p>
+            </div>
+            <div>
+                <h3>Luis Lee</h3>
+                <p>技术背景：Science | 毕业院校：Das Karlsruher Institut fÜr Technologie(KIT)</p>
+                <p>简介：Luis现致力研发机器人应用于建筑业，有丰富的Python、R语言开发经验。负责PHDSheep Ai的迁移学习的工作。</p>
+            </div>
+            <div>
+                <h3>Freda</h3>
+                <p>技术背景：Data Analysis | 毕业院校：University of Sydney</p>
+                <p>简介：Freda在AI领域有深厚的造诣，致力于将AI技术融入少儿编程课程。负责PHDSheep Ai的神经网络架构、自然语言处理等工作。</p>
+            </div>
+        </div>
+    </section>
+    <section id="courses">
+        <h2>课程介绍</h2>
+        <div class="content">
+            <div>
+                <h3>基础Scratch课程</h3>
+                <p>适合年级：1～3年级</p>
+                <p>课程描述：通过图形化编程工具，培养孩子们的编程兴趣和基本的数理逻辑思维。</p>
+            </div>
+            <div>
+                <h3>Python + Ai课程</h3>
+                <p>适合年级：4年级及以上</p>
+                <p>课程描述：发展方向：积累Ai时代下的编程素养。学习Python等编程语言，深入学习人工智能相关知识，掌握机器学习和数据科学的基础。培养孩子们的实际编程能力和解决问题的能力。</p>
+            </div>
+            <div>
+                <h3>C++课程</h3>
+                <p>适合年级：4年级及以上</p>
+                <p>课程描述：科技特长生的首选语言，加分还是适应未来社会的主流底层语言的中流砥柱。</p>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <h2>联系信息</h2>
+        <p>你可以通过以下方式联系Earl：</p>
+        <p>邮箱：2447530682@qq.com</p>
+		<p>微信：19832109026 （微信名Earl）</p>
+        <p>电话：19832109026</p>
+    </section>
+    <footer>
+        <p>&copy; 2024 PHD编程网站. 保留所有权利. IP地址：175.188.165.166 | 域名：phdsheep.cn</p>
+    </footer>
+    <script>
+        window.addEventListener('scroll', function() {
+            const nav = document.querySelector('nav');
+            if (window.scrollY > 50) {
+                nav.style.background = 'rgba(0, 0, 0, 0.9)';
+            } else {
+                nav.style.background = 'rgba(0, 0, 0, 0.6)';
+            }
+        });
+        document.addEventListener('DOMContentLoaded', () => {
+            const sections = document.querySelectorAll('section');
+            const contentDivs = document.querySelectorAll('.content > div');
+            const options = {
+                threshold: 0.1,
+            };
+            const observer = new IntersectionObserver((entries, observer) => {
+                entries.forEach(entry => {
+                    if (!entry.isIntersecting) return;
+                    entry.target.style.opacity = "1";
+                    entry.target.style.transform = "translateY(0)";
+                    observer.unobserve(entry.target);
+                });
+            }, options);
+            sections.forEach(section => {
+                observer.observe(section);
+            });
+            contentDivs.forEach(div => {
+                observer.observe(div);
+            });
+        });
+    </script>
+</body>
+</html>
